@@ -154,7 +154,7 @@ def pii_analysis(questions_and_responses: pd.DataFrame):
                     questions = questions_and_responses[questions_column]
                     result["question"] = questions.at[index]        
             results.update(pii_result) 
-            print(result)       
+            print("RESULTS",results)       
             # roll back the table with count info for each PII violation for the same entity and content        
             counts = defaultdict(int)
             pii_results_list=pii_result["PII Findings"]
